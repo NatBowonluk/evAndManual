@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluestone EV</title>
+    <link rel="icon"
+        href='data:image/png;base64,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'>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .btn-waitauthen {
+            margin: auto;
+            padding: 5px;
+            width: 200px;
+            height: 200px;
+            display: block;
+            color: #fff;
+            /* color: black; */
+            /* background-color: #00ff6a; */
+            background-color: #939191;
+            border: 15px solid #fff;
+            border-radius: 100px;
+            font-size: 34px;
+            line-height: .8;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .btn-waitauthen small {
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" id="activeNav">
+            <img class="logo" alt=""
+                src='data:image/png;base64,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' />
+        </a>
+        <div id="myLinksB">
+            <a href="/">Charge</a>
+            <a href="/StatusPage">Status</a>
+            <a href="/Historypage">History</a>
+            <!-- <a href="/SignUpPage" id="rfidBar">Sign up (for RFID Mode)</a> -->
+            <a href="/SettingPage" id="settingBar">Settings</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <img class="menu" alt=""
+                src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAA2CAYAAACBWxqaAAADJElEQVRoQ+1az0sbQRT+Zjcp2LRBk0MVqyJ41rsIKoIH/zvp2WKPUm9ePAlrTx6UHiIpihIPNqAxTQ9qsr9eebNZKzXuZicjQpmBZZPded+87/veHuYxAn2M09NTOjs7Q7vdRqFQgOf5fUS93JQg8DE1NYXZ2Vkh0pY5Pz+n7e1t3N7eQgghk7fsHIDU0DRoxfcEz+2gUHiL1dXV9Cwcx6GdnR0MDw/Dsiy4ricJUHqoYoLJYQKE4vt3uLioYXFxMT2LarUqHbi/v5fIQ0ND6LivW0Jh4CMMA6ytraUT4KQPDg6oVqvh7u5OuiAsG/Qi+qaDcuHalsD09DTm5+fTv4F0yNed8VpfojbWhoA2KRWBjAOKwmkLMw5ok1IRyDigKJy2MOOANikVgYwDisJpCzMOaJNSEcg4oCictrD/w4Gjo+/UbDaRy+Xg+77c9yYNCp++JSIQAXyPGwC9Mbq7aaG+q/Z9FzMzM5ibmxPCcb7R3t4egiBAPp+H53mpBAQsmShf8eCeUfw/DJOSU09criUIvJPP53NRX2h9/RPV63WMjIzI5DmRMOwhcZwpAUJEBOLxr2OJ8QNXP8HOWbi5aXBnDmJr6ysdHh7KliF337jv8zi5XuvF6jNZKUr3Hj/nUnzJQRSi02ljaWkJ4urqmhzHQaPRkKXDi3M59TM44bh0+Dcrz1fyNyAp9wP/zBxeJ8D4+HhEIJ5Vr9dpbGxMNJtNSnPAtu0nLj0m4LpuQoLxkqokIgKTk5MSQBVlAAX1hhoCevXMjmYcyK6Z3gjjgF49s6MZB7JrpjfCOKBXz+xoxoHsmumNMA7o1TM7mnEgu2Z6I4wDvfQ8OTnh3sWzUsdNAFUvLEugXC7zCRq9ZyWq1R+0u7uLaE8sEJ0IeUqEBlqWEAYeRkc/YHl5We+eeGPjM9VqF38bY9TLBYHosWr1Et7kLVxfX2FlZUUZpaf7m5tfqFI5RrFYfFZ9TpwJqPbn+MCTbQGt1i/9BCqVY9rf30er9TuBAAYmwAeeJiY+YmFhQa8DbMvl5U/ig1EPJfJQRt2SEdRVX9UD6SHK5RJKpZL4AwK7QWSrFCl1AAAAAElFTkSuQmCC' />
+        </a>
+    </div>
+    <!-- <br> -->
+    <div class="container content welcome-content">
+        <div class="row">
+            <div class="col">
+                <h3>
+                    Welcome <br>
+                    <small id="rfidName"></small>
+                    <br id="betweenRfidandSta">
+                    <small id="ipSTA"></small>
+                </h3>
+            </div>
+            <div class="col">
+                <div class="timeclock">
+                    <h3 class="mb-0">
+                        <span id="hours">00</span>:<span id="min">00</span>:<span id="sec">00</span>
+                    </h3>
+                    <small id="Date"></small>
+                    <br>
+                    <small id="evTemp"></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container content btn-start-content">
+        <div class="btn-start-border">
+
+            <span id="btn-waitauthen-main" style="display: none;">
+                <button class="btn-waitauthen" id="btn-waitauthen">
+                    Authen <br> <small>Waiting...</small><br>
+                    <small id="text_schedule_waitauthen">00:00</small>
+                </button>
+                <div class="btn-cancel-border" id="waitAutenCancelSchedule">
+                    <button class="btn-danger" id="cancel_schedule" onclick="schedulCancel()">Cancel</button>
+                </div>
+            </span>
+
+            <button class="btn-standby" id="btn-standby">
+                Standby <br>
+            </button>
+            <button class="btn-start" id="btn-start" type="submit" onclick="ChangePage()" style="display: none;">
+                Charge <br>
+                <small>Now</small>
+            </button>
+            <button class="btn-standbycharging" id="btn-standbycharging" style="display: none;">
+                Standby <br>
+                <small>Charging...</small>
+            </button>
+            <button class="btn-charging" id="btn-charging" style="display: none;">Charging...</button>
+            <button class="btn-finish" id="btn-finish" style="display: none;">Finish</button>
+            <button class="btn-error" id="btn-error" style="display: none;">Error</button>
+            <span id="btn-schedule" style="display: none;">
+                <button class="btn-start" id="btn-start-schedule">
+                    Start <br>
+                    <small>Charging at</small> <br>
+                    <small id="text_schedule">00:00</small>
+                </button>
+                <div class="btn-cancel-border">
+                    <button class="btn-danger" id="cancel_schedule" onclick="schedulCancel()">Cancel</button>
+                </div>
+            </span>
+            <span id="btn-schedule-standby" style="display: none;">
+                <button class="btn-start" style="background-color: #00A652;font-size: 38px;" id="btn-standby-schedule">
+                    Standby <br>
+                    <small>Charging at</small> <br>
+                    <small id="text_schedule_standby">00:00</small>
+                </button>
+                <div class="btn-cancel-border">
+                    <button class="btn-danger" id="cancel_schedule" onclick="schedulCancel()">Cancel</button>
+                </div>
+            </span>
+        </div>
+
+    </div>
+    <hr>
+    <div class="container content form-content" style="display: none;" id="errorBar">
+        <h4 id="errorMessage"></h4>
+    </div>
+    <hr>
+    <div id="setBar">
+        <div class="container content form-content" style="padding-bottom: 5px;" id="divSlider">
+            <h3>Set Max Charging Current</h3>
+            <div class="row align-items-center mx-n1 mb-2">
+                <div class="col-auto px-1"> <span id="userCurrentShow"> A</span></div>
+                <div class="col pl-1 pr-5" style="margin-top: 0.5rem !important;">
+                    <input type="range" onchange="updateCurrent(this)" id="usercurrentset" min=6 max=32 step=1 value=32
+                        class="slider" disabled>
+
+                </div>
+            </div>
+        </div>
+        <div class="container content form-content" style="padding-bottom: 10px;padding-top: 0px; display: none;"
+            id="backSettingTab">
+            <div class="text-center">
+                <!-- <button class="btn-primary btn-lg"
+                    style="background-color: rgb(255, 25, 25); border-color: rgb(255, 25, 25);" id="backSetting"
+                    type="submit">Back to Setting</button> -->
+            </div>
+        </div>
+        <hr>
+        <div class="container content form-content" id="setScheduleBar" style="padding-bottom: 0px;">
+
+            <h3>Set Charging Schedule</h3>
+            <div class="row align-items-center mx-n1 mb-2">
+                <div class="col-auto px-1 mt-4">Time</div>
+                <div class="col pl-1 pr-5">
+                    <table>
+                        <tr>
+                            <td><label style="margin-right: 10px; font-size:1rem" for="scheduleAlways"
+                                    id="message">Always use schedule
+                                    for charging</label></td>
+                            <td><input type="checkbox" name="scheduleAlways" id="scheduleAlways"
+                                    onclick="scheduleAlways()" disabled>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="time" style="text-align: start;" id="timeschedule" value="" name="timeschedule">
+                </div>
+            </div>
+
+            <div class="text-center" id="text-center" style="display:none;">
+                <button class="btn-primary btn-lg" style="margin-right: 10px;" id="scheduleSubmit"
+                    type="submit">Submit</button>
+                <button class="btn-primary btn-lg"
+                    style="background-color: rgb(255, 25, 25); border-color: rgb(255, 25, 25); margin-left: 10px;"
+                    id="scheduleClear" type="submit">Clear</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="container content status-charging">
+        <h3>Charging Status</h3>
+    </div>
+
+    <hr>
+
+    <div class="status-content">
+        <div class="container px-4">
+            <div class="row mx-n4">
+                <div class="col-4 px-4">
+                    <div class="status">
+                        <div class="status-circle" id="connect"></div>
+                        Connect
+                    </div>
+                </div>
+                <div class="col-4 px-4">
+                    <div class="status">
+                        <div class="status-circle" id="charge"></div>
+                        Charge
+                    </div>
+                </div>
+                <div class="col-4 px-4">
+                    <div class="status">
+                        <div class="status-circle" id="error"></div>
+                        Error
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <script src="/jquery.js"></script>
+    <script>
+        var modeAll;
+        var stat;
+        var rfidName;
+        var current;
+        var scheduleTimeSet;
+        var timing = false;
+        var errorTemptext;
+        var ipSTA;
+        var rfidMode;
+        var rfidAuthen;
+        var maxCurrent;
+
+        var tempHeat;
+
+        var flagAlreadyClr;
+        /////////////////////////////////////////////////////////////////////////////////////////////////////
+        $(document).ready(function () {
+            // Making 2 variable month and day
+            var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+            // make single object
+            var newDate = new Date();
+            // make current time
+            newDate.setDate(newDate.getDate());
+            // setting date and time
+            $('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+
+            setInterval(function () {
+                // Create a newDate() object and extract the seconds of the current time on the visitor's
+                var seconds = new Date().getSeconds();
+                // Add a leading zero to seconds value
+                $("#sec").html((seconds < 10 ? "0" : "") + seconds);
+            }, 250);
+
+            setInterval(function () {
+                // Create a newDate() object and extract the minutes of the current time on the visitor's
+                var minutes = new Date().getMinutes();
+                // Add a leading zero to the minutes value
+                $("#min").html((minutes < 10 ? "0" : "") + minutes);
+            }, 250);
+
+            setInterval(function () {
+                // Create a newDate() object and extract the hours of the current time on the visitor's
+                var hours = new Date().getHours();
+                // Add a leading zero to the hours value
+                $("#hours").html((hours < 10 ? "0" : "") + hours);
+            }, 250);
+
+            // document.getElementById("timeschedule").value = "";
+
+            setTimeout(() => currentShow(), 250);
+            setTimeout(() => ResponsePage(), 400);
+
+            // setInterval(function () {
+            if (document.getElementById("timeschedule").value != "") {
+                document.getElementById("text-center").style = "";
+                document.getElementById("scheduleAlways").disabled = false;
+                // document.getElementById("scheduleAllButton").style = "";
+                document.getElementById("setScheduleBar").style = "padding-bottom: 20px;";
+            }
+            else if (document.getElementById("timeschedule").value == "") {
+                document.getElementById("scheduleAlways").disabled = true;
+                document.getElementById("text-center").style.display = "none";
+                document.getElementById("setScheduleBar").style = "padding-bottom: 0px;";
+                // document.getElementById("scheduleAllButton").style.display = "none";
+            }
+            // }, 100);
+            setInterval(function () {
+                if (modeAll == 0) {
+                    if (document.getElementById("myLinksB").classList.contains('active')) {
+                        document.getElementById("myLinksB").style = "height: 145px;";
+                    }
+                    else {
+                        document.getElementById("myLinksB").style = "";
+                    }
+                }
+                else if (modeAll == 1) {
+                    if (document.getElementById("myLinksB").classList.contains('active')) {
+                        if (rfidMode == 0) {
+                            document.getElementById("myLinksB").style = "height: 115px;";
+                        }
+                        else if (rfidMode == 1) {
+                            document.getElementById("myLinksB").style = "height: 115px;";
+                        }
+                    }
+                    else {
+                        document.getElementById("myLinksB").style = "";
+                    }
+                }
+                else if (modeAll == 2) {
+                    if (document.getElementById("myLinksB").classList.contains('active')) {
+                        document.getElementById("myLinksB").style = "height: 115px;";
+                    }
+                    else {
+                        document.getElementById("myLinksB").style = "";
+                    }
+                }
+                else if (modeAll == 3) {
+                    if (document.getElementById("myLinksB").classList.contains('active')) {
+                        document.getElementById("myLinksB").style = "height: 115px;";
+                    }
+                    else {
+                        document.getElementById("myLinksB").style = "";
+                    }
+                }
+                else if (modeAll == 4) {
+                    if (document.getElementById("myLinksB").classList.contains('active')) {
+                        document.getElementById("myLinksB").style = "height: 115px;";
+                    }
+                    else {
+                        document.getElementById("myLinksB").style = "";
+                    }
+                }
+                else if (modeAll == 6) {
+                    if (document.getElementById("myLinksB").classList.contains('active')) {
+                        if (stat > 1) {
+                            document.getElementById("myLinksB").style = "height: 115px;";
+                        }
+                        else {
+                            document.getElementById("myLinksB").style = "height: 145px;";
+                        }
+                    }
+                    else {
+                        document.getElementById("myLinksB").style = "";
+                    }
+                }
+                else if (modeAll == 7) {
+                    if (document.getElementById("myLinksB").classList.contains('active')) {
+                        document.getElementById("myLinksB").style = "height: 115px;";
+                    }
+                    else {
+                        document.getElementById("myLinksB").style = "";
+                    }
+                }
+
+            }, 100);
+
+
+
+        });
+
+        function stealthModeSettime() {
+            var date = document.getElementById("Date").innerHTML;
+            var hours = document.getElementById("hours").innerHTML;
+            var minute = document.getElementById("min").innerHTML;
+            var second = document.getElementById("sec").innerHTML;
+            var datevalue = date.split(" ");
+            console.log(date);
+            console.log(datevalue[0]);
+            console.log(datevalue[1]);
+            console.log(datevalue[2]);
+            console.log(datevalue[3]);
+            console.log(hours);
+            console.log(minute);
+            console.log(second);
+
+            var xhttp = new XMLHttpRequest();
+            if (modeAll != 6) {
+                xhttp.open('GET', "/stealthsettime?&hours=" + hours + "&minute=" + minute + "&second=" + second + "&day=" + datevalue[1] + "&month=" + datevalue[2] + "&year=" + datevalue[3], true);
+                xhttp.send();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var time = this.responseText;
+                        console.log(time);
+                        timing = true;
+                    }
+                }
+            }
+            else if (modeAll == 6) {
+                console.log("schedule not send");
+            }
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myLinksB");
+            x.classList.toggle("active");
+        }
+
+        function editTime() {
+            document.getElementById("timeschedule").focus();
+        }
+
+        function displayAll() {
+            // modeAll = obj.Mode;
+            if (modeAll === 0) {                         //////////////////////////standby
+                document.getElementById("usercurrentset").disabled = true;
+                document.getElementById("usercurrentset").value = maxCurrent;
+                document.getElementById("userCurrentShow").innerHTML = maxCurrent + 'A';
+                document.getElementById("timeschedule").disabled = false;
+                document.getElementById("errorBar").style.display = "none";
+                document.getElementById("btn-start").style.display = "none";
+                document.getElementById("btn-standby").style = "";
+                document.getElementById("btn-standbycharging").style.display = "none";
+                document.getElementById("btn-charging").style.display = "none";
+                document.getElementById("btn-finish").style.display = "none"
+                document.getElementById("btn-schedule").style.display = "none";
+                document.getElementById("btn-error").style.display = "none";
+                document.getElementById("btn-error").style.display = "none";
+                document.getElementById("btn-schedule-standby").style.display = "none";
+                if (stat == 0 || stat == 1) {
+                    document.getElementById("connect").style.background = "gray";
+                    document.getElementById("charge").style.background = "gray";
+                    document.getElementById("error").style.background = "gray";
+                }
+                else if (stat == 2 || stat == 3) {
+                    document.getElementById("connect").style.background = "#FEF200";
+                    document.getElementById("charge").style.background = "gray";
+                    document.getElementById("error").style.background = "gray";
+                }
+
+                if (document.getElementById("timeschedule").value != "") {
+                    document.getElementById("text-center").style = "";
+                    document.getElementById("scheduleAlways").disabled = false;
+                    document.getElementById("setScheduleBar").style = "padding-bottom: 20px;";
+                }
+                else if (document.getElementById("timeschedule").value == "") {
+                    document.getElementById("scheduleAlways").disabled = true;
+                    document.getElementById("text-center").style.display = "none";
+                    document.getElementById("setScheduleBar").style = "padding-bottom: 0px;";
+                }
+
+                // document.getElementById("rfidBar").style = "";
+                document.getElementById("settingBar").style = "";
+                document.getElementById("btn-waitauthen-main").style.display = "none";
+                document.getElementById("backSettingTab").style.display = "none";
+
+            }
+            else if (modeAll === 1) {                              ////button on
+                document.getElementById("usercurrentset").disabled = true;
+                document.getElementById("usercurrentset").value = maxCurrent;
+                document.getElementById("userCurrentShow").innerHTML = maxCurrent + 'A';
+                document.getElementById("errorBar").style.display = "none";
+                document.getElementById("btn-schedule-standby").style.display = "none";
+
+                document.getElementById("btn-standby").style.display = "none";
+                document.getElementById("btn-standbycharging").style.display = "none";
+                document.getElementById("btn-charging").style.display = "none";
+                document.getElementById("btn-finish").style.display = "none";
+                document.getElementById("btn-schedule").style.display = "none";
+                document.getElementById("btn-error").style.display = "none";
+                document.getElementById("connect").style.background = "#FEF200";
+                document.getElementById("charge").style.background = "gray";
+                document.getElementById("error").style.background = "gray";
+
+                document.getElementById("waitAutenCancelSchedule").style.display = "none";
+                document.getElementById("text_schedule_waitauthen").style.display = "none";
+
+                if (rfidMode == 1) {
+                    // document.getElementById("rfidBar").style.display = "none";
+
+                    if (rfidAuthen == 1) {
+                        document.getElementById("btn-start").style = "";
+                        document.getElementById("btn-waitauthen-main").style.display = "none";
+                    }
+                    else if (rfidAuthen != 1) {
+                        document.getElementById("btn-start").style.display = "none";
+                        document.getElementById("btn-waitauthen-main").style = "";
+                    }
+
+                }
+                else if (rfidMode == 0) {
+                    // document.getElementById("rfidBar").style = "";
+                    document.getElementById("btn-start").style = "";
+                    document.getElementById("btn-waitauthen-main").style.display = "none";
+
+                }
+
+                document.getElementById("settingBar").style.display = "none";
+                if (flagSubmit == true) {
+                    // document.getElementById("setScheduleBar").style.display = "none";
+                    document.getElementById("text-center").style.display = "none";
+                    document.getElementById("timeschedule").disabled = true;
+
+                }
+                else if (flagSubmit == false) {
+                    document.getElementById("timeschedule").disabled = false;
+
+                    if (document.getElementById("timeschedule").value != "") {
+                        document.getElementById("text-center").style = "";
+                        document.getElementById("scheduleAlways").disabled = false;
+
+                        document.getElementById("setScheduleBar").style = "padding-bottom: 20px;";
+                    }
+                    else if (document.getElementById("timeschedule").value == "") {
+                        document.getElementById("scheduleAlways").disabled = true;
+                        document.getElementById("text-center").style.display = "none";
+                        document.getElementById("setScheduleBar").style = "padding-bottom: 0px;";
+
+                    }
+                }
+
+            }
+            else if (modeAll === 2) {                              ///////standbycharging
+                document.getElementById("usercurrentset").disabled = true;
+                document.getElementById("usercurrentset").value = maxCurrent;
+                document.getElementById("userCurrentShow").innerHTML = maxCurrent + 'A';
+                document.getElementById("timeschedule").disabled = true;
+                document.getElementById("errorBar").style.display = "none";
+                document.getElementById("btn-schedule-standby").style.display = "none";
+                document.getElementById("btn-start").style.display = "none";
+                document.getElementById("btn-standby").style.display = "none";
+                document.getElementById("btn-standbycharging").style = "";
+                document.getElementById("btn-charging").style.display = "none";
+                document.getElementById("btn-finish").style.display = "none";
+                document.getElementById("btn-schedule").style.display = "none";
+                document.getElementById("btn-error").style.display = "none";
+                document.getElementById("connect").style.background = "#FEF200";
+                document.getElementById("charge").style.background = "gray";
+                document.getElementById("error").style.background = "gray";
+                document.getElementById("text-center").style.display = "none";
+                // document.getElementById("setScheduleBar").style.display = "none";
+                document.getElementById("btn-waitauthen-main").style.display = "none";
+                // document.getElementById("rfidBar").style.display = "none";
+                document.getElementById("settingBar").style.display = "none";
+
+            }
+            // charging
+            else if (modeAll === 3) {
+                document.getElementById("usercurrentset").disabled = false;
+                // document.getElementById("scheduleAlways").disabled = true;
+
+                document.getElementById("timeschedule").disabled = true;
+                document.getElementById("errorBar").style.display = "none";
+                document.getElementById("btn-schedule-standby").style.display = "none";
+                document.getElementById("btn-start").style.display = "none";
+                document.getElementById("btn-standby").style.display = "none";
+                document.getElementById("btn-standbycharging").style.display = "none";
+                document.getElementById("btn-charging").style = "";
+                document.getElementById("btn-finish").style.display = "none";
+                document.getElementById("btn-schedule").style.display = "none";
+                document.getElementById("btn-error").style.display = "none";
+                document.getElementById("connect").style.background = "#FEF200";
+                document.getElementById("charge").style.background = "#1A85C7";
+                document.getElementById("error").style.background = "gray";
+                document.getElementById("text-center").style.display = "none";
+                // document.getElementById("setScheduleBar").style.display = "none";
+                document.getElementById("btn-waitauthen-main").style.display = "none";
+                // document.getElementById("rfidBar").style.display = "none";
+                document.getElementById("settingBar").style.display = "none";
+
+            }
+            // finish             
+            else if (modeAll === 4) {
+                document.getElementById("scheduleAlways").disabled = true;
+
+                document.getElementById("usercurrentset").disabled = true;
+                document.getElementById("usercurrentset").value = maxCurrent;
+                document.getElementById("userCurrentShow").innerHTML = maxCurrent + 'A';
+                document.getElementById("timeschedule").disabled = true;
+                document.getElementById("errorBar").style.display = "none";
+                document.getElementById("btn-start").style.display = "none";
+                document.getElementById("btn-standby").style.display = "none";
+                document.getElementById("btn-standbycharging").style.display = "none";
+                document.getElementById("btn-charging").style.display = "none";
+                document.getElementById("btn-finish").style = "";
+                document.getElementById("btn-schedule").style.display = "none";
+                document.getElementById("btn-error").style.display = "none";
+                document.getElementById("connect").style.background = "#FEF200";
+                document.getElementById("charge").style.background = "gray";
+                document.getElementById("error").style.background = "gray";
+                document.getElementById("text-center").style.display = "none";
+                // document.getElementById("setScheduleBar").style.display = "none";
+                document.getElementById("btn-schedule-standby").style.display = "none";
+                document.getElementById("btn-waitauthen-main").style.display = "none";
+                // document.getElementById("rfidBar").style.display = "none";
+                document.getElementById("settingBar").style.display = "none";
+
+            }
+
+            //         //schedule
+            else if (modeAll === 6) {
+                document.getElementById("timeschedule").disabled = true;
+                document.getElementById("errorBar").style.display = "none";
+                $('#text_schedule_standby').html(scheduleTimeSet);
+                $('#text_schedule').html(scheduleTimeSet);
+                $('#text_schedule_waitauthen').html(scheduleTimeSet);
+                document.getElementById("btn-start").style.display = "none";
+                document.getElementById("btn-error").style.display = "none";
+                document.getElementById("btn-standbycharging").style.display = "none";
+                document.getElementById("btn-charging").style.display = "none";
+                document.getElementById("btn-finish").style.display = "none";
+
+                if (stat == 0 || stat == 1) {
+                    document.getElementById("scheduleAlways").disabled = false;
+                    document.getElementById("usercurrentset").disabled = true;
+                    document.getElementById("usercurrentset").value = maxCurrent;
+                    document.getElementById("userCurrentShow").innerHTML = maxCurrent + 'A';
+                    document.getElementById("btn-waitauthen-main").style.display = "none";
+                    document.getElementById("btn-schedule").style.display = "none";
+                    document.getElementById("btn-standby").style.display = "none"
+                    document.getElementById("btn-schedule-standby").style = "background-color: #00A652;font-size: 38px;";
+                    document.getElementById("connect").style.background = "gray";
+                    document.getElementById("charge").style.background = "gray";
+                    document.getElementById("error").style.background = "gray";
+
+                    // document.getElementById("rfidBar").style = "";
+                    document.getElementById("settingBar").style = "";
+
+                }
+                else if (stat == 2 || stat == 3 || stat == 4) {
+                    document.getElementById("usercurrentset").disabled = true;
+                    document.getElementById("usercurrentset").value = maxCurrent;
+                    document.getElementById("userCurrentShow").innerHTML = maxCurrent + 'A';
+                    if (rfidMode == 1) {
+                        // document.getElementById("rfidBar").style.display = "none";
+                        document.getElementById("btn-start").style.display = "none";
+                        document.getElementById("btn-schedule").style.display = "none";
+                        if (rfidAuthen == 1) {
+                            document.getElementById("btn-waitauthen-main").style.display = "none";
+                            document.getElementById("btn-schedule").style = "";
+                        }
+                        else if (rfidAuthen != 1) {
+                            document.getElementById("btn-waitauthen-main").style = "";
+                            document.getElementById("waitAutenCancelSchedule").style = "";
+                            document.getElementById("text_schedule_waitauthen").style = "";
+                            document.getElementById("btn-schedule").style.display = "none";
+                        }
+
+                    }
+                    else if (rfidMode == 0) {
+                        // document.getElementById("rfidBar").style = "";
+                        document.getElementById("btn-schedule").style = "";
+                        document.getElementById("btn-waitauthen").style.display = "none";
+
+                    }
+                    document.getElementById("btn-schedule-standby").style.display = "none";
+                    document.getElementById("btn-standby").style.display = "none";
+                    document.getElementById("connect").style.background = "#FEF200";
+                    document.getElementById("charge").style.background = "gray";
+                    document.getElementById("error").style.background = "gray";
+
+                    // document.getElementById("rfidBar").style = "";
+                    document.getElementById("settingBar").style.display = "none";
+                }
+
+                document.getElementById("text-center").style.display = "none";
+                // document.getElementById("setScheduleBar").style.display = "none";
+
+            }
+            else if (modeAll === 7) {
+                document.getElementById("usercurrentset").disabled = true;
+                document.getElementById("timeschedule").disabled = true;
+                document.getElementById("errorBar").style.display = "";
+                document.getElementById("btn-schedule-standby").style.display = "none";
+                document.getElementById("btn-error").style = "";
+                document.getElementById("btn-start").style.display = "none";
+                document.getElementById("btn-standby").style.display = "none";
+                document.getElementById("btn-standbycharging").style.display = "none";
+                document.getElementById("btn-charging").style.display = "none";
+                document.getElementById("btn-finish").style.display = "none";
+                document.getElementById("btn-schedule").style.display = "none";
+                document.getElementById("connect").style.background = "gray";
+                document.getElementById("charge").style.background = "gray";
+                document.getElementById("error").style.background = "red";
+                document.getElementById("text-center").style.display = "none";
+                document.getElementById("setScheduleBar").style.display = "none";
+                document.getElementById("btn-waitauthen").style.display = "none";
+                // document.getElementById("rfidBar").style.display = "none";
+                document.getElementById("settingBar").style.display = "none";
+            }
+        }
+
+        var pressing;
+        var c;
+        var flagSchedule;
+        var flagSubmit;
+        var flagClear;
+        var flagSetTime = false;
+        var staConnection = false;
+
+        var flagScheduleFirsttime = false;
+
+        function ResponsePage() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('GET', "/indexfirst", true);
+            xhttp.send();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    // console.log(this.responseText);
+                    let obj = JSON.parse(this.responseText);
+
+                    if (obj.hasOwnProperty('temperature')) {
+                        tempHeat = obj.temperature.toFixed(2);
+                        if (tempHeat > 10) {
+                            document.getElementById("evTemp").innerHTML = tempHeat + '°C';
+                        }
+                    }
+
+                    if (obj.hasOwnProperty('Mode')) {
+                        modeAll = obj.Mode;
+                    }
+                    if (obj.hasOwnProperty('Status')) {
+                        stat = obj.Status;
+                    }
+                    if (obj.hasOwnProperty('flagSubmit')) {
+                        flagSubmit = obj.flagSubmit;
+                    }
+
+                    if (obj.hasOwnProperty('errorTemptext')) {
+                        errorTemptext = obj.errorTemptext;
+                        document.getElementById("errorMessage").innerHTML = 'Error Message : ' + errorTemptext;
+                    }
+
+                    if (obj.hasOwnProperty('ScheduleTime')) {
+                        scheduleTimeSet = obj.ScheduleTime;
+
+                        if (!flagScheduleFirsttime) {
+                            document.getElementById("timeschedule").value = scheduleTimeSet;
+                            flagScheduleFirsttime = true;
+                            // flagAlreadyClr = false;
+                        }
+
+                        if (scheduleTimeSet == "unknown") {
+                            // if (flagAlreadyClr) {
+                                // document.getElementById("timeschedule").disabled = true;
+                                document.getElementById("scheduleAlways").disabled = true;
+                            // }
+                            // else {
+
+                            // }
+                        }
+                        // else if(scheduleTimeSet != "unknown" && modeAll == 6){
+
+                        // }
+                    }
+
+                    if (obj.hasOwnProperty('rfidMode')) {
+                        rfidMode = obj.rfidMode;
+                    }
+                    if (obj.hasOwnProperty('rfidAuthen')) {
+                        rfidAuthen = obj.rfidAuthen;
+                    }
+
+                    if (obj.hasOwnProperty('rfidName')) {
+                        rfidName = obj.rfidName;
+                        // if (obj.rfidName.length > 0 || obj.rfidName != " ") {
+                        //     document.getElementById("rfidName").style = "";
+                        //     document.getElementById("rfidName").innerHTML = rfidName;
+                        // }
+                        // else if (obj.rfidName.length <= 0 || obj.rfidName == " ") {
+                        //     document.getElementById("rfidName").style.display = "none";
+                        // }
+                        if (obj.rfidName != "") {
+                            document.getElementById("rfidName").style = "";
+                            document.getElementById("betweenRfidandSta").style = "";
+                            document.getElementById("rfidName").innerHTML = rfidName;
+                        }
+                        else if (obj.rfidName == "" || obj.rfidName == " " || obj.rfidName == ' ') {
+                            document.getElementById("betweenRfidandSta").style.display = "none";
+                            document.getElementById("rfidName").style.display = "none";
+                        }
+                    }
+                    if (obj.hasOwnProperty('staConnection')) {
+                        staConnection = obj.staConnection;
+                    }
+                    if (obj.hasOwnProperty('ipSTA')) {
+                        ipSTA = obj.ipSTA;
+
+                        if (staConnection == false) {
+                            document.getElementById("ipSTA").style = "";
+                            document.getElementById("ipSTA").style.fontSize = "65%";
+                            document.getElementById("ipSTA").innerHTML = 'STA IP : ' + ipSTA;
+                        }
+                        else if (staConnection == true || ipSTA == "0.0.0.0") {
+                            document.getElementById("ipSTA").style = "display: none;";
+                        }
+                    }
+                    // /////////////////////////////////////////////////p'tu request///////////////////////////////////////////////////////////////
+                    //                     if (obj.hasOwnProperty('userCurrentSet')) {
+                    //                         if (obj.userCurrentSet > 0) {
+                    //                             document.getElementById("userCurrentShow").innerHTML = String(obj.userCurrentSet) + ' A';
+                    //                             document.getElementById("usercurrentset").value = obj.userCurrentSet;
+                    //                         }
+                    //                         else {
+                    //                             document.getElementById("usercurrentset").value = 0;
+                    //                             document.getElementById("userCurrentShow").innerHTML = ' 0 A';
+                    //                         }
+                    //                     }
+
+                    displayAll();
+
+                    console.log(obj);
+                }
+
+            }
+        }
+        // }
+
+        // function alwaysScheduleState(){
+
+        // }
+
+        $('#scheduleSubmit').click(function () {
+            flagSubmit = true;
+            flagClear = false;
+            const input_schedule = $('#timeschedule').val();
+            var hours = document.getElementById("hours").innerHTML;
+            var minute = document.getElementById("min").innerHTML;
+            var second = document.getElementById("sec").innerHTML;
+            console.log('schedule : ' + input_schedule);
+            var Date = document.getElementById("Date").innerHTML.split(" ");
+            var Dateday = Date[0];
+            var Day = Date[1];
+            var Month = Date[2];
+            var Year = Date[3];
+            var full_data;
+
+            if (document.getElementById("scheduleAlways").checked == true) {
+                alwaysSchedule = true;
+            }
+            else if (document.getElementById("scheduleAlways").checked == false) {
+                alwaysSchedule = false;
+            }
+
+            if (input_schedule != "") {
+                flagSchedule = true;
+                var xhttp = new XMLHttpRequest();
+                xhttp.open('GET', "/schedulesubmit?&day=" + Day + "&month=" + Month + "&year=" + Year + "&hours=" + hours + "&minute=" + minute + "&second=" + second + "&schedule=" + input_schedule + "&alwaysSchedule=" + alwaysSchedule, true);
+                xhttp.send();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var time = this.responseText;
+                        console.log(time);
+                    }
+                }
+            }
+
+        });
+
+        $('#scheduleClear').click(function () {
+            flagClear = true;
+
+            flagAlreadyClr = true;
+
+            alwaysSchedule = false;
+
+            flagSubmit = false;
+            flagSchedule = false;
+            document.getElementById("scheduleAlways").checked = false;
+            document.getElementById("timeschedule").value = "";
+            document.getElementById("scheduleAlways").disabled = true;
+            document.getElementById("text-center").style.display = "none";
+            // if(){
+            // }
+            // document.getElementById("text-center").style = "";
+            document.getElementById("setScheduleBar").style = "padding-bottom: 0px;";
+            console.log("clear")
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('GET', "/scheduleclear?&alwaysSchedule=" + alwaysSchedule, true);
+            xhttp.send();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var time = this.responseText;
+                    console.log(time);
+                }
+            }
+        });
+
+        function scheduleAlways() {
+            if (document.getElementById("scheduleAlways").checked == true) {
+                alwaysSchedule = true;
+            }
+            else if (document.getElementById("scheduleAlways").checked == false) {
+                alwaysSchedule = false;
+            }
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('GET', "/schedulealwayschange?&alwaysSchedule=" + alwaysSchedule, true);
+            xhttp.send();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    // let obj = JSON.parse(this.responseText);
+                }
+            }
+
+        }
+
+        function schedulCancel() {
+            flagClear = true;
+            if (document.getElementById("scheduleAlways").checked == true) {
+                alwaysSchedule = true;
+                // document.getElementById("text-center").style = "";
+            }
+            else if (document.getElementById("scheduleAlways").checked == false) {
+                alwaysSchedule = false;
+                // document.getElementById("text-center").style.display = "none";
+            }
+            flagSubmit = false;
+            flagSchedule = false;
+            // document.getElementById("scheduleAlways").checked = false;
+            // document.getElementById("timeschedule").value = "";
+            console.log("clear")
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('GET', "/schedulecancel?&alwaysSchedule=" + alwaysSchedule, true);
+            xhttp.send();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var time = this.responseText;
+                    console.log(time);
+                }
+            }
+        }
+
+        function ChangePage() {                                             ///////startcharging open coil
+            flagSubmit = true;
+            flagSchedule = false;
+            alwaysSchedule = false;
+            var date = document.getElementById("Date").innerHTML;
+            var hours = document.getElementById("hours").innerHTML;
+            var minute = document.getElementById("min").innerHTML;
+            var second = document.getElementById("sec").innerHTML;
+            var datevalue = date.split(" ");
+            pressing = true;
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('GET', "/chargebutton?&day=" + datevalue[1] + "&month=" + datevalue[2] + "&year=" + datevalue[3] + "&hours=" + hours + "&minute=" + minute + "&second=" + second, true);
+            xhttp.send();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var time = this.responseText;
+                    console.log(time);
+                }
+            }
+        }
+        function updateCurrent(element) {                                             ///////startcharging open coil
+            var usercurrentset = document.getElementById("usercurrentset").value;
+            setTimeout(function () {
+                var xhttp = new XMLHttpRequest();
+                xhttp.open('GET', "/currentupdate?&current=" + usercurrentset, true);
+                xhttp.send();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        console.log(this.responseText);
+                        let obj = JSON.parse(this.responseText);
+
+                        if (obj.hasOwnProperty('userCurrentSet')) {
+                            if (obj.userCurrentSet > 0) {
+                                document.getElementById("userCurrentShow").innerHTML = String(obj.userCurrentSet) + ' A';
+                                document.getElementById("usercurrentset").value = obj.userCurrentSet;
+                            }
+                            else {
+                                document.getElementById("usercurrentset").value = 0;
+                                document.getElementById("userCurrentShow").innerHTML = ' 0 A';
+                            }
+                        }
+                    }
+                }
+            }, 250);
+        }
+
+        function currentShow() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('GET', "/currentshow", true);
+            xhttp.send();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    let obj = JSON.parse(this.responseText);
+
+                    if (obj.hasOwnProperty('Mode')) {
+                        modeAll = obj.Mode;
+                    }
+
+                    // if (obj.hasOwnProperty('ScheduleFlag')) {
+
+                    //     if (obj.ScheduleFlag == false || obj.ScheduleFlag == "false" || obj.ScheduleFlag == "False" || obj.ScheduleFlag == "FALSE" || obj.ScheduleFlag == "0" || obj.ScheduleFlag == 0) {
+                    //         document.getElementById("scheduleAlways").disabled = false;
+                    //     }
+                    //     else if (obj.ScheduleFlag == true || obj.ScheduleFlag == "true" || obj.ScheduleFlag == "True" || obj.ScheduleFlag == "TRUE" || obj.ScheduleFlag == "1" || obj.ScheduleFlag == 1) {
+                    //         document.getElementById("scheduleAlways").disabled = false;
+                    //     }
+                    // }
+
+                    if (obj.hasOwnProperty('ScheduleAlways')) {
+                        if (obj.ScheduleAlways == false || obj.ScheduleAlways == "false" || obj.ScheduleAlways == "False" || obj.ScheduleAlways == "FALSE" || obj.ScheduleAlways == "0" || obj.ScheduleAlways == 0) {
+                            document.getElementById("scheduleAlways").checked = false;
+                            alwaysSchedule = false;
+                        }
+                        else if (obj.ScheduleAlways == true || obj.ScheduleAlways == "true" || obj.ScheduleAlways == "True" || obj.ScheduleAlways == "TRUE" || obj.ScheduleAlways == "1" || obj.ScheduleAlways == 1) {
+                            document.getElementById("scheduleAlways").checked = true;
+                            alwaysSchedule = true;
+                        }
+                    }
+
+                    if (obj.hasOwnProperty('ScheduleTime')) {
+                        scheduleTimeSet = obj.ScheduleTime;
+
+                        if (scheduleTimeSet != "" || scheduleTimeSet != null || scheduleTimeSet != undefined || scheduleTimeSet != "unknown") {
+                            // var time = scheduleTimeSet.split(":");
+                            // document.getElementById("hours").innerHTML = time[0];
+                            // document.getElementById("min").innerHTML = time[1];
+                            // document.getElementById("sec").innerHTML = time[2];
+                            document.getElementById("scheduleAlways").disabled = false;
+                        }
+
+
+                    }
+
+                    if (obj.hasOwnProperty('userCurrentSet')) {
+                        if (modeAll == 3) {
+                            if (obj.userCurrentSet > 0) {
+                                document.getElementById("userCurrentShow").innerHTML = String(obj.userCurrentSet) + ' A';
+                                document.getElementById("usercurrentset").value = obj.userCurrentSet;
+                            }
+                            else {
+                                document.getElementById("usercurrentset").value = 0;
+                                document.getElementById("userCurrentShow").innerHTML = ' 0 A';
+                            }
+                        }
+                    }
+
+                    if (obj.hasOwnProperty('maxCurrentSet')) {
+                        // document.getElementById("userCurrentShow").innerHTML = String(obj.maxCurrentSet) + ' A';
+                        document.getElementById("usercurrentset").max = obj.maxCurrentSet;
+                        maxCurrent = obj.maxCurrentSet;
+                    }
+
+                    if(obj.hasOwnProperty('flagAlreadyClr')){
+                        flagAlreadyClr = obj.flagAlreadyClr;
+                    }
+                }
+            }
+        }
+
+        function alive() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/alive", true);
+            xhr.send();
+            // setTimeout(function () { window.open("/", "_self"); }, 1000);
+        }
+
+        setInterval(() => alive(), 2000);
+        setTimeout(() => stealthModeSettime(), 3000);
+        setInterval(() => ResponsePage(), 1000);
+    </script>
+</body>
+
+</html>

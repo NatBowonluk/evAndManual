@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluestone EV</title>
+  <link rel="icon" href="img/logo_sm.png">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background: #2A8AC9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: bgcolors 60s linear infinite;
+    }
+
+    .text-footer {
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      font: 14px "Open Sans", sans-serif;
+      color: #fff;
+      opacity: 0.5;
+    }
+
+    .text-footer a {
+      color: #fff;
+    }
+
+    .loader {
+      width: 30%;
+      height: 30%;
+      transform: rotate(-90deg);
+      stroke-linecap: round;
+      stroke-width: 5;
+      fill: none;
+    }
+
+    .loader .internal-circle,
+    .loader .external-circle {
+      stroke: #fff;
+      stroke-dashoffset: 0;
+      transform-origin: center;
+    }
+
+    .loader .internal-circle {
+      stroke-dasharray: 187;
+      animation: internal 1s ease-in-out infinite;
+      opacity: 0.4;
+    }
+
+    .loader .external-circle {
+      stroke-dasharray: 312;
+      animation: external 1s linear infinite;
+      opacity: 0.9;
+    }
+
+    @keyframes internal {
+      0% {
+        stroke-dashoffset: 187;
+      }
+
+      25% {
+        stroke-dashoffset: 80;
+      }
+
+      100% {
+        stroke-dashoffset: 187;
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes external {
+      0% {
+        stroke-dashoffset: 312;
+        transform: rotate(70deg);
+      }
+
+      60% {
+        stroke-dashoffset: -312;
+      }
+
+      100% {
+        stroke-dashoffset: -312;
+        transform: rotate(450deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <svg class="loader" viewBox="0 0 120 120" id="circleLoad">
+    <circle class="internal-circle" cx="60" cy="60" r="30"></circle>
+    <circle class="external-circle" cx="60" cy="60" r="50"></circle>
+  </svg>
+
+  <script>
+    var connection = new WebSocket('ws://' + location.hostname + ':81/');
+    connection.onmessage = function (event) {
+      var full_data = event.data;
+      console.log(full_data);
+      var obj = JSON.parse(full_data);
+
+      if (obj.hasOwnProperty('status')) {
+        var status = obj.status;
+        if (status == 0) {
+          document.body.style.background = "#fc0303";
+          setTimeout(function () { document.body.style.background = "#2A8AC9"; }, 1000);
+        }
+        else if (status == 1) {
+          document.body.style.background = "#03fc28";
+          setTimeout(function () {location.reload(true); }, 500);
+        }
+        else if (status == 2) {
+          document.body.style.background = "#2A8AC9";
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
