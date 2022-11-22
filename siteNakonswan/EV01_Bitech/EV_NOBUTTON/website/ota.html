@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<HEAD>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluestone EV</title>
+    <!-- <link rel="icon" href="img/logo_sm.png"> -->
+    <link rel="icon"
+        href='data:image/png;base64,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'>
+
+</HEAD>
+
+<BODY onload="firmwareDetail()">
+    <H1>Choose firmware file (.bin)</H1>
+    <!-- <form id="uploadform" enctype="multipart/form-data" method="post" action="/upload">
+        <input id="fileupload" name="inobinfile" accept=".bin" type="file" />
+        <input type="submit" value="submit" id="submit" />
+    </form>
+    <br>
+    <br> -->
+    <form id="upload_form" enctype="multipart/form-data" method="post">
+        <input type="file" accept=".bin" name="file1" id="file1" onchange="getFileData(this);"><br>
+        <br>
+        <input type="button" value="Upload File" onclick="uploadFile()">
+        <progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
+        <h3 id="status"></h3>
+        <p id="loaded_n_total"></p>
+    </form>
+    <button onclick="logoutButton()" style="color:red;">LOG OUT</button>
+
+    <script>
+        function _(el) {
+            return document.getElementById(el);
+        }
+
+        var companyName;
+        var build;
+        var mainControl;
+        var deviceCode;
+        var specialPrefix;
+
+        // var companyName = 'BLUESTONE';
+        // var build = 'HPH';
+        // var mainControl = 'ICES';
+        // var deviceCode = 'EVCS';
+        // var specialPrefix;
+
+        //         #define RTCIC 1 //0 = DS1307, 1 = DS3231
+        // #define boardColour 1 //0 = EVC01 REV1, 1 = EVC01 REV2, EVC01 REV3
+        // #define EVCONTROL 1// 0 = WA, 1 = PHOENIX
+
+        function getFileData(myFile) {
+            var file = myFile.files[0];
+            var filename = file.name;
+            var filesize = file.size;
+            var filetype = file.type;
+            var fileext = filename.split('.').pop();
+            var fileext = fileext.toLowerCase();
+            var allowed = ['bin'];
+            var filenameArray;
+            if (filename.split('_', 5)) {
+                filenameArray = filename.split('_', 5);
+                if (filename.split('_', 5)[0] == companyName) {
+                    var filenameArrayLast = filenameArray[4].split('.', 1);
+                    var filenameArrayDevice = filenameArray[3].substring(0, 4);
+                    filenameArray[4] = filenameArrayLast[0];
+                    filenameArray[3] = filenameArrayDevice;
+                }
+                else {
+                    alert('File Name not allowed');
+                    document.getElementById('file1').value = '';
+                    return false;
+                }
+            }
+            else {
+                alert('File Name not allowed');
+                document.getElementById('file1').value = '';
+                return false;
+            }
+
+            if (allowed.indexOf(fileext) == -1) {
+                alert('File type not allowed');
+                document.getElementById('file1').value = '';
+                return false;
+            }
+            if (filesize > 10000000) {
+                alert('File size is too big');
+                document.getElementById('file1').value = '';
+                return false;
+            }
+            // if(filenameArray[4] != specialPrefix){
+            //     alert('File Prefix code not correct');
+            //     document.getElementById('file1').value = '';
+            //     return false;
+            // }
+            if (filenameArray[3] != deviceCode) {
+                alert('File Device code not correct');
+                document.getElementById('file1').value = '';
+                return false;
+            }
+            if (filenameArray[2] != mainControl) {
+                alert('File Main code not correct');
+                document.getElementById('file1').value = '';
+                return false;
+            }
+            if (filenameArray[1] != build) {
+                alert('File Build code not correct');
+                document.getElementById('file1').value = '';
+                return false;
+            }
+            if (filenameArray[0] != companyName) {
+                alert('File Company name not correct');
+                document.getElementById('file1').value = '';
+                return false;
+            }
+
+
+            console.log(filename);
+            console.log(filenameArray);
+            // console.log(filenameArrayLast);
+            console.log(filesize);
+            console.log(filetype);
+            console.log(fileext);
+        }
+
+        function uploadFile() {
+            var file = _("file1").files[0];
+            // alert(file.name+" | "+file.size+" | "+file.type);
+            var formdata = new FormData();
+            formdata.append("file1", file);
+            var ajax = new XMLHttpRequest();
+            ajax.upload.addEventListener("progress", progressHandler, false);
+            ajax.addEventListener("load", completeHandler, false);
+            ajax.addEventListener("error", errorHandler, false);
+            ajax.addEventListener("abort", abortHandler, false);
+            ajax.open("POST", "/upload");
+            ajax.send(formdata);
+        }
+
+        function progressHandler(event) {
+            _("loaded_n_total").innerHTML = "Uploaded " + event.loaded + " bytes of " + event.total;
+            var percent = (event.loaded / event.total) * 100;
+            _("progressBar").value = Math.round(percent);
+            _("status").innerHTML = Math.round(percent) + "% uploaded... please wait";
+        }
+
+        function completeHandler(event) {
+            _("status").innerHTML = event.target.responseText;
+            _("progressBar").value = 0;
+        }
+
+        function errorHandler(event) {
+            _("status").innerHTML = "Upload Failed";
+        }
+
+        function abortHandler(event) {
+            _("status").innerHTML = "Upload Aborted";
+        }
+
+        function logoutButton() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/logoutupdatefw", true);
+            xhr.send();
+            setTimeout(function () { window.open("/", "_self"); }, 1000);
+        }
+        function alive() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/alive", true);
+            xhr.send();
+            // setTimeout(function () { window.open("/", "_self"); }, 1000);
+        }
+
+        function firmwareDetail() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/getrightfirmwarename", true);
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    console.log(this.responseText);
+                    let obj = JSON.parse(this.responseText);
+
+                    if (obj.hasOwnProperty('companyMode')) {
+                        companyName = obj.companyMode;
+                    }
+                    if (obj.hasOwnProperty('build')) {
+                        build = obj.build;
+                    }
+                    if (obj.hasOwnProperty('mainControl')) {
+                        mainControl = obj.mainControl;
+                    }
+                    if (obj.hasOwnProperty('deviceCode')) {
+                        deviceCode = obj.deviceCode;
+                    }
+                    if (obj.hasOwnProperty('specialPrefix')) {
+                        specialPrefix = obj.specialPrefix;
+                    }
+                }
+            }
+        }
+
+        setInterval(() => alive(), 2000);
+    </script>
+</BODY>
+
+</HTML>

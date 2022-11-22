@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .custom-select {
+            position: relative;
+            /* font-family: Arial; */
+        }
+
+        .custom-select select {
+            display: none;
+        }
+
+        .select-selected {
+            background-color: rgb(221, 221, 221);
+        }
+
+        .select-selected:after {
+            position: absolute;
+            content: "";
+            top: 14px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-color: #fff transparent transparent transparent;
+        }
+
+        .select-selected.select-arrow-active:after {
+            border-color: transparent transparent #fff transparent;
+            top: 7px;
+        }
+
+        .select-items div,
+        .select-selected {
+            /* color: #ffffff; */
+            /* padding: 8px 16px; */
+            /* border: 1px solid transparent; */
+            /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
+            cursor: pointer;
+            user-select: none;
+            padding: 6px 0px 0px 6px;
+            border-radius: 20px;
+
+        }
+
+        /* .select-selected p{
+            margin-left: 0px;
+        } */
+
+        .select-items {
+            position: absolute;
+            /* background-color: DodgerBlue; */
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 99;
+        }
+
+        .select-hide {
+            display: none;
+        }
+
+        .select-items div:hover,
+        .same-as-selected {
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+
+        .select-items p {
+            margin-left: 17px;
+        }
+
+        .select-selected p {
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            margin-left: 10px;
+        }
+
+        .select-items .wifiHigh {
+            margin-left: -15px;
+            padding: 0px 0px 0px 0px;
+            width: .1rem;
+            height: 1.2rem;
+            /* background: #000; */
+            position: relative;
+            top: -1.1rem;
+            left: 20rem;
+            /* right: -10rem; */
+            box-shadow: 1rem -0.4rem 0 0, 1.3rem -0.6rem 0 0, 1.6rem -0.8rem 0 0, 1.9rem -1rem 0 0;
+        }
+
+        .select-items .wifiHigh:before {
+            margin-left: -15px;
+            padding: 0px 0px 0px 0px;
+            position: absolute;
+            content: "";
+            display: block;
+            width: 3.2rem;
+            height: 2rem;
+            background: rgb(255, 255, 255);
+        }
+
+        .select-selected .wifiHigh:before {
+            /* padding: 0px 0px 0px 0px; */
+            position: absolute;
+            content: "";
+            display: block;
+            width: 2.3rem;
+            height: 1.2rem;
+            background: rgb(221, 221, 221);
+        }
+
+        .select-selected .wifiHigh {
+            /* padding: 0px 0px 0px 0px; */
+            width: .1rem;
+            height: 1.2rem;
+            /* background: #000; */
+            position: relative;
+            top: -.3rem;
+            /* left: 16rem; */
+            left: 18.7rem;
+            /* right: 100% - 20rem; */
+            /* right: 0; */
+            box-shadow: 1rem -0.4rem 0 0, 1.3rem -0.6rem 0 0, 1.6rem -0.8rem 0 0, 1.9rem -1rem 0 0;
+        }
+
+        .select-items .wifiMed {
+            margin-left: -15px;
+            padding: 0px 0px 0px 0px;
+            width: .1rem;
+            height: 1.2rem;
+            /* background: #000; */
+            position: relative;
+            top: -1.1rem;
+            left: 20rem;
+            /* right: -10rem; */
+            box-shadow: 1rem -0.4rem 0 0, 1.3rem -0.6rem 0 0, 1.6rem -0.8rem 0 0, 1.9rem -1rem 0 0;
+        }
+
+        .select-items .wifiMed:before {
+            margin-left: -15px;
+            padding: 0px 0px 0px 0px;
+            position: absolute;
+            content: "";
+            display: block;
+            width: 3.2rem;
+            height: 2rem;
+            background: rgb(255, 255, 255);
+        }
+
+        .select-selected .wifiMed:before {
+            /* padding: 0px 0px 0px 0px; */
+            position: absolute;
+            content: "";
+            display: block;
+            width: 2.3rem;
+            height: 1.2rem;
+            background: rgb(221, 221, 221);
+        }
+
+        .select-selected .wifiMed {
+            /* padding: 0px 0px 0px 0px; */
+            width: .1rem;
+            height: 1.2rem;
+            /* background: #000; */
+            position: relative;
+            top: -.3rem;
+            /* left: 16rem; */
+            left: 18.7rem;
+            /* right: 100% - 20rem; */
+            /* right: 0; */
+            box-shadow: 1rem -0.4rem 0 0, 1.3rem -0.6rem 0 0, 1.6rem -0.8rem 0 0, 1.9rem -1rem 0 0;
+        }
+
+        .select-items .wifiLow {
+            margin-left: -15px;
+            padding: 0px 0px 0px 0px;
+            width: .1rem;
+            height: 1.2rem;
+            /* background: #000; */
+            position: relative;
+            top: -1.1rem;
+            left: 20rem;
+            /* right: -10rem; */
+            box-shadow: 1rem -0.4rem 0 0, 1.3rem -0.6rem 0 0, 1.6rem -0.8rem 0 0, 1.9rem -1rem 0 0;
+        }
+
+        .select-items .wifiLow:before {
+            margin-left: -15px;
+            padding: 0px 0px 0px 0px;
+            position: absolute;
+            content: "";
+            display: block;
+            width: 3.2rem;
+            height: 2rem;
+            background: rgb(255, 255, 255);
+        }
+
+        .select-selected .wifiLow:before {
+            /* padding: 0px 0px 0px 0px; */
+            position: absolute;
+            content: "";
+            display: block;
+            width: 2.3rem;
+            height: 1.2rem;
+            background: rgb(221, 221, 221);
+        }
+
+        .select-selected .wifiLow {
+            /* padding: 0px 0px 0px 0px; */
+            width: .1rem;
+            height: 1.2rem;
+            /* background: #000; */
+            position: relative;
+            top: -.3rem;
+            /* left: 16rem; */
+            left: 18.7rem;
+            /* right: 100% - 20rem; */
+            /* right: 0; */
+            box-shadow: 1rem -0.4rem 0 0, 1.3rem -0.6rem 0 0, 1.6rem -0.8rem 0 0, 1.9rem -1rem 0 0;
+        }
+
+        /* @media (max-width: 800px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        } */
+        .signal-bars {
+            display: inline-block;
+            height: 16px;
+            list-style: none;
+            overflow: hidden;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .signal-bars .bar {
+            display: inline-block;
+            width: 4px;
+            float: left;
+            height: 100%;
+            margin-right: 2px;
+        }
+
+        .signal-bars .bar.first-bar {
+            padding-top: 12px;
+        }
+
+        .signal-bars .bar.second-bar {
+            padding-top: 8px;
+        }
+
+        .signal-bars .bar.third-bar {
+            padding-top: 4px;
+        }
+
+        .signal-bars .bar.fourth-bar {
+            padding-top: 0px;
+        }
+
+        .signal-bars li div {
+            height: 100%;
+        }
+
+        .bars-4 div {
+            background-color: #16a085;
+            border: thin solid darken(#16a085, 7%);
+        }
+
+        .bars-3 div {
+            background-color: #f1c40f;
+            border: thin solid darken(#f1c40f, 7%);
+        }
+
+        .bars-1 div,
+        .bars-2 div {
+            background-color: #e74c3c;
+            border: thin solid darken(#e74c3c, 20%);
+        }
+
+        .bars-3 .bar.fourth-bar div,
+        .bars-1 .bar:not(.first-bar) div,
+        .bars-2 .bar:not(.first-bar):not(.second-bar) div {
+            background-color: #fafafa;
+            border: thin solid #f3f3f3;
+        }
+    </style>
+</head>
+
+<!-- <body onload="validated()"> -->
+
+<body>
+    <h2>Custom Select</h2>
+
+    <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+    <div class="small-group">
+        <button class="btn btn-primary" onclick="validated()">Scan</button>
+        <div class="custom-select" style="width:100%;">
+            <select id="customizeSelect">
+                <option value="0">
+                    <p>Select car:</p>
+                </option>
+                <option value="1">Audi -> 100%</option>
+                <option value="2">BMW -> 100%</option>
+                <option value="3">Citroen -> 100%</option>
+                <option value="4">Ford -> 100%</option>
+                <option value="5">Honda -> 100%</option>
+                <option value="6">Jaguar -> 100%</option>
+                <option value="7">Land Rover -> 100%</option>
+                <option value="8">Mercedes -> 100%</option>
+                <option value="9">Mini -> 100%</option>
+                <option value="10">Nissan -> 100%</option>
+                <option value="11">Toyota -> 100%</option>
+                <option value="12">Volvo -> 100%</option>
+                <option value="13">OOOOOOOOOOOOOOOOOO -> 100%</option>
+            </select>
+        </div>
+    </div>
+
+
+    <script>
+
+        function validated() {
+            var scanSelectorClass = document.getElementsByClassName('select-selected');
+            if (scanSelectorClass.length > 0) {
+                // isMobileVersion[0].style.color = "red";
+                console.log('class exist');
+                const element = document.getElementById("selectorScan");
+                element.remove();
+                scan();
+            }
+            else {
+                console.log('class not exist');
+                scan();
+            }
+        }
+
+        function scan() {
+            var x, i, j, selElmnt, a, b, c;
+            x = document.getElementsByClassName("custom-select");
+            for (i = 0; i < x.length; i++) {
+                selElmnt = x[i].getElementsByTagName("select")[0];
+                a = document.createElement("DIV");
+                a.setAttribute("class", "select-selected");
+                a.setAttribute("id", "selectorScan");
+                a.innerHTML = '<p>' + selElmnt.options[selElmnt.selectedIndex].innerHTML + '</p>';
+                a2 = document.createElement("DIV");
+                a2.setAttribute("class", "wifiHigh");
+                // a2.setAttribute("style", "background-color: " + selElmnt.options[selElmnt.selectedIndex].getAttribute("COLOR"));
+                a.appendChild(a2);
+                x[i].appendChild(a);
+                b = document.createElement("DIV");
+                b.setAttribute("class", "select-items select-hide");
+                for (j = 0; j < selElmnt.length; j++) {
+                    c = document.createElement("SPAN");
+                    c.innerHTML = '<p>' + selElmnt.options[j].innerHTML + '</p>';
+                    d = document.createElement("DIV");
+                    d.setAttribute("class", "wifiHigh");
+                    // d.setAttribute("style", "background-color: " + selElmnt.options[j].getAttribute("COLOR"));
+                    c.appendChild(d);
+                    c.addEventListener("click", function (e) {
+                        var y, i, k, s, h;
+                        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                        h = this.parentNode.previousSibling;
+                        for (i = 0; i < s.length; i++) {
+                            if (s.options[i].innerText == this.innerText) {
+                                s.selectedIndex = i;
+                                h.innerHTML = this.innerHTML;
+                                y = this.parentNode.getElementsByClassName("same-as-selected");
+                                for (k = 0; k < y.length; k++) {
+                                    y[k].removeAttribute("class");
+                                }
+                                this.setAttribute("class", "same-as-selected");
+                                break;
+                            }
+                        }
+                        h.click();
+                        // console.log("asdasdasd" + this.innerText);
+                    });
+                    b.appendChild(c);
+                    // console.log(b);
+                }
+                x[i].appendChild(b);
+                a.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    closeAllSelect(this);
+                    this.nextSibling.classList.toggle("select-hide");
+                    this.classList.toggle("select-arrow-active");
+                });
+            }
+            document.addEventListener("click", closeAllSelect);
+        }
+
+
+
+
+        function closeAllSelect(elmnt) {
+            var x, y, i, arrNo = [];
+            var select = document.getElementById('customizeSelect');
+            var option = select.options[select.selectedIndex];
+            x = document.getElementsByClassName("select-items");
+            y = document.getElementsByClassName("select-selected");
+            for (i = 0; i < y.length; i++) {
+                if (elmnt == y[i]) {
+                    arrNo.push(i)
+                } else {
+                    y[i].classList.remove("select-arrow-active");
+                }
+            }
+            for (i = 0; i < x.length; i++) {
+                if (arrNo.indexOf(i)) {
+                    x[i].classList.add("select-hide");
+                    console.log("customizeSelect set to " + option.value);
+                }
+            }
+
+        }
+        // document.addEventListener("click", closeAllSelect);
+    </script>
+
+</body>
+
+</html>

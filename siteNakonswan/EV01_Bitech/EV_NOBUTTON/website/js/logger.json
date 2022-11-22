@@ -1,0 +1,22 @@
+{
+    "Data": [
+        {
+            "UID": "1254364645",
+            "Name": "Blue Stone",
+            "Hours": "18:10:00",
+            "Energy": 256.66
+        },
+        {
+            "UID": "2234633547",
+            "Name": "Peter Stone",
+            "Hours": "03:22:12",
+            "Energy": 123.33
+        },
+        {
+            "UID": "3124364542",
+            "Name": "Sebastian Blue",
+            "Hours": "11:43:12",
+            "Energy": 444.44
+        }
+    ]
+}
